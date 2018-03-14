@@ -4,6 +4,7 @@ A web based project, can be useful for donating and receiving accessories for th
 Language: PHP, HTML5, CSS3, Bootstrap, JavaScript, MySQL
 
 Features:
+
 i) User could donate accessories for people.If the user is interested for donating accessories, they have to make a post with the image of the things.From the receivers request donor could select the receiver for whom he/she donate the accessories.
 
 ii) User also be able for requesting the donor to give him/her the accessories.If the donor also interested for donating things for the folloing user they could accept the request from the user. 
