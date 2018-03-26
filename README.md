@@ -1,5 +1,5 @@
 # Help_desk_system
-A web based project, can be useful for donating and receiving accessories for the peoples. There are three operation panel- admin, employer and user. For doing operations they have to login first and registration for new user in this Help Desk System.
+A web based project, can be useful for donating and receiving accessories for the peoples. There are two operation panel- admin and user. For doing operations they have to login first and registration for new user in this Help Desk System.
 
 Language: PHP, HTML5, CSS3, Bootstrap, JavaScript, MySQL
 
