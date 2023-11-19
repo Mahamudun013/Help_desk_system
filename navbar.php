@@ -60,7 +60,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="a"><span class="glyphicon glyphicon-lock"></span>User Login</h4>
           </div>
+
           <div class="modal-body" style="padding:40px 50px;">
+
             <form role="form" action="function.php" method="POST">
               <div class="form-group">
                 <label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
@@ -75,6 +77,7 @@
               <button type="submit" class="btn btn-success btn-block" name="login"><span class="glyphicon glyphicon-off"></span> Login</button>
             </form>
           </div>
+          
           <div class="modal-footer">
             <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
             <p>Not a Member? <a href="user_register.php">Sign Up</a></p>

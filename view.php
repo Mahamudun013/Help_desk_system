@@ -7,10 +7,11 @@
     header("Location:index.php");
   }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>User</title>
+  <title>Details Info</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -97,13 +98,14 @@
            while($row = mysqli_fetch_assoc($select)){
       ?>  
          <div class="jumbotron">
-            <h2 style="text-align: center;color: red;"><b>Donor Details</b></h3><br>
-
+            <h2 style="text-align: center;color:;"><b>Donor Details</b></h3>
+              <hr>
+           <h3>Donor Name:</h3>
           <h2 style="color: blue"><?php echo $row["name"] ?></h2>
-          <br>
+          
            <h3>Product Type:</h3>
             <h4>&nbsp&nbsp&nbsp&nbsp<?php echo $row["product_type"] ?></h4>
-          <br>
+          
 
           <h4>Product name:</h4><h5>&nbsp&nbsp&nbsp<?php echo $row["product_name"] ?></h5>
 

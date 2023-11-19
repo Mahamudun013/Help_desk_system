@@ -18,8 +18,8 @@ $connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
         		echo "<script>location='user_home.php'</script>";
       		}
       		else{
-                echo "<script>alert('SORRY... YOU ENTERD WRONG ID AND PASSWORD... PLEASE RETRY...')</script>";
-				echo "<script>location='login.php'</script>";
+                echo "<script>alert('Sorry..You enter wrong ID/Password.')</script>";
+				echo "<script>location='index.php'</script>";
       		}
     	}
     	elseif (empty($_POST["username"])) {
@@ -34,7 +34,8 @@ $connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 
 
    // user  logout
-    if (isset($_GET['emp_username'])) {
+    if (isset($_GET['emp_username']))
+    {
       session_unset();
       session_destroy();
       header("Location:index.php");
