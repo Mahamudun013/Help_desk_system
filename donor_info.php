@@ -55,7 +55,8 @@
 
     <ul class="nav navbar-nav navbar-right">
 
-      
+      <li><a href="accept_news.php"><span class="glyphicon glyphicon-envelope"></span> Message</a></li>
+      <li><a href="permit_donor.php"><span class="glyphicon glyphicon-ok"></span> Accept</a></li>
       <li><a href="donor_info.php"><span class="glyphicon glyphicon-gift"></span> Donate</a></li>
       <li><a href="user_home.php"><span class="glyphicon glyphicon-search"></span> Receive</a></li>
 
@@ -231,11 +232,11 @@ if(isset($_POST["submit"]))
   
        if($insert)
        {
-             echo " Successfully Submitted !"."<br>";
+          echo '<script>alert("Congratulations ! Item Posted Successfully.") </script>';
        }
        else
        {
-             echo "Data Not inserted"."<br>";
+           echo '<script>alert("Something went wrong!.") </script>';
        }
   
 

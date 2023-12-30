@@ -35,7 +35,7 @@
       <a class="navbar-brand" href="#">HELPDESK.COM</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="user_home.php">Home</a></li>
       <li><a href="#"></a></li>
 
         <form class="navbar-form navbar-left">   
@@ -56,6 +56,7 @@
     <ul class="nav navbar-nav navbar-right"> 
 
       <li><a href="accept_news.php"><span class="glyphicon glyphicon-envelope"></span> Message</a></li>
+      <li><a href="permit_donor.php"><span class="glyphicon glyphicon-ok"></span> Accept</a></li>
       <li><a href="donor_info.php"><span class="glyphicon glyphicon-gift"></span> Donate</a></li>
       <li><a href="user_home.php"><span class="glyphicon glyphicon-search"></span> Receive</a></li>
 

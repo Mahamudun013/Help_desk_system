@@ -37,7 +37,10 @@ $connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
     if (isset($_GET['emp_username']))
     {
       session_unset();
-      session_destroy();
+      if (isset($_GET['emp_username'])) {
+          session_destroy();
+      }
+      // session_destroy();
       header("Location:index.php");
     }
 
@@ -131,7 +134,6 @@ include('config.php');
 
 
 //accepted request by donor
-  {
 
     include('config.php');
      $connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
@@ -144,7 +146,7 @@ include('config.php');
     if (isset($_GET['accept_uid'])) {
 
       $acceptor=$_GET['accept_uid'];
-      $donator=$_REQUEST['accept_donor'];
+      $donator=$_GET['accept_donor'];
       $accp_status='Accepted';
 
       $q="INSERT INTO accept_table(receiver_name,donor_name,status) VALUES('$acceptor',
@@ -161,10 +163,41 @@ include('config.php');
         echo "<script>location='permit_donor.php'</script>";
       }
      }
+
+
+
+//rejected request by donor
+
+    include('config.php');
+     $connect= mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
+
+       if(!$connect)
+       {
+          die("Error occured".mysqli_connect_error());
+       }
+       
+    if (isset($_GET['rejected_uid'])) {
+
+      $acceptor=$_GET['rejected_uid'];
+      $donator=$_GET['reject_donor'];
+      $accp_status='Rejected';
+
+      $q="INSERT INTO accept_table(receiver_name,donor_name,status) VALUES('$acceptor',
+      '$donator','$accp_status')"; 
+
+      $r=mysqli_query($connect,$q);
+
+      if(!$r){
+        echo "<script>alert('Not Rejected')</script>";
+        echo "<script>location='permit_donor.php'</script>";
+      }
+      else{
+        echo "<script>alert('Application Rejected')</script>";
+        echo "<script>location='permit_donor.php'</script>";
+      }
+     }
    
 
-
-  }
 
 
     ?>

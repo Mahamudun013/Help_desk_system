@@ -142,13 +142,13 @@ if(isset($_POST["submit"]))
 
        $insert=mysqli_query($conn,$sql);
   
-       if($insert)
+       if ($insert)
        {
-             echo " Successfully Submitted !"."<br>";
+          echo '<script>alert("Congratulations ! Successfully Registered.") </script>';
        }
        else
        {
-            // echo "Data Not inserted"."<br>";
+            echo '<script>alert("Something went wrong!") </script>';
        }
   
 

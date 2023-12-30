@@ -1,31 +1,30 @@
 <?php
   include('function.php');
   session_start();
-  if(!isset($_SESSION['username'])){
+  if (!isset($_SESSION['username']))
+  {
     session_unset();
     session_destroy();
     header("Location:index.php");
   }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
   <title>Profile</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="http://maps.googleapis.com/maps/api/js"></script>
-  
- 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
  </head>
- <style>
 
+ <style>
   .navbar{
     border-radius: 0px;
   } 
@@ -51,7 +50,7 @@
   }
   .jumbotron {
       margin-bottom: 0;
-    }
+  }
 	.modal-header, .a, .close {
       background-color: #5cb85c;
       color:white !important;
@@ -59,28 +58,23 @@
       font-size: 30px;
   }
   .modal-body{
-  color:black;
+    color:black;
   }
   .modal-footer {
-      background-color: #f9f9f9;
+    background-color: #f9f9f9;
   }
  </style>
  
  <body>
-
  <nav class="navbar navbar-inverse">
   <div class="container">
-    
-    
 
     <div class="navbar-header">
-
       <a class="navbar-brand" href="#">HELPDESK.COM</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="user_home.php">Home</a></li>
       <li><a href="#"></a></li>
-
         <form class="navbar-form navbar-left">   
           <div class="input-group">
              <input type="text" class="form-control" placeholder="Search">
@@ -91,19 +85,14 @@
           </div>
          </div>    
       </form>
-    
-
     </ul>
 
-
     <ul class="nav navbar-nav navbar-right">
-
-      
-
+      <li><a href="accept_news.php"><span class="glyphicon glyphicon-envelope"></span> Message</a></li>
+      <li><a href="permit_donor.php"><span class="glyphicon glyphicon-ok"></span> Accept</a></li>
       <li><a href="donor_info.php"><span class="glyphicon glyphicon-gift"></span> Donate</a></li>
       <li><a href="user_home.php"><span class="glyphicon glyphicon-search"></span> Receive</a></li>
 
-      
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" 
         href="#"><?php echo $_SESSION['username'];?> &nbsp<span class="caret"></span></a>
         <ul class="dropdown-menu">
